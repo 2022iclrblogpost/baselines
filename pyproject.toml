@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "baselines"
+version = "0.1.6"
+description = ""
+authors = ["Iclr Blog <2022iclrblogpost@tfgo.dev>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9"
+gym = "0.15.4"
+wandb = "^0.12.6"
+tensorboardX = "^2.4"
+nvidia-pyindex = "^1.0.9"
+
+free-mujoco-py = {version = "^2.1.6", optional = true}
+atari-py = {version = "0.2.6", optional = true}
+gym-microrts = {version = "^0.2.0", optional = true}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+mujoco = ["free-mujoco-py"]
+atari = ["atari-py"]
+gym-microrts = ["gym-microrts"]
